@@ -1,0 +1,40 @@
+{% import "macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+		<link rel="stylesheet" href="/styles/theme.css">
+		<link rel="stylesheet" href="/styles/markdown.css">
+		<link rel="stylesheet" href="/styles/navigation.css">
+		<link rel="stylesheet" href="/styles/code.css">
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<div id="content">
+			<h1>{% block heading %}{% endblock %}</h1>
+			<hr>
+			{% block content %}{% endblock %}
+		</div>
+		<a href="#nav" id="menu">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+				<path d="M 3,3 L 11,3 M 3,7 L 11,7 M 3,11 L 11,11" stroke-width="2">
+			</svg>
+		</a>
+		<div id="nav">
+			<a href="#!" id="overlay"></a>
+			<nav>
+				<div id="links">
+				{% for link in config.extra.links %}
+					<a href="{{ link.url }}" style="mask-image: url(/assets/{{ link.icon }});"></a>
+				{% endfor %}
+				</div>
+				<hr />
+				<ul>
+					{{ macros::sections(section=get_section(path = "_index.md"), all=false) }}
+				</ul>
+			</nav>
+		</div>
+	</body>
+<html>

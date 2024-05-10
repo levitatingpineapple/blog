@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ section.title }}
+{% endblock %}
+
+{% block heading %}
+{{ section.title }}
+{% endblock %}
+
+{% block content %}
+<ul>
+	{{ macros::sections(section=section, all=true) }}
+</ul>
+{% endblock content %}

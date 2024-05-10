@@ -1,0 +1,7 @@
+vars { d2-config.pad: 16 }
+direction: right
+d: 🎚️ Dimmer { style.border-radius: 8 }
+st: "set/room/light\n(not retained)"
+t: "room/light\n(retained)"
+l: 💡 Light { style.border-radius: 8 }
+d -> st -> l -> t -> d { style.animated: true }

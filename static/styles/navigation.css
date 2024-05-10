@@ -1,0 +1,115 @@
+#content {
+	margin: 44px auto 0 auto;
+	max-width: var(--content-max-width);
+	transform: translateX(calc(var(--navigation-width) / 2));
+	transition: transform var(--animation-duration);
+}
+html { scroll-behavior: smooth; }
+#menu {
+	display: block;
+	left: 0;
+	position: fixed;
+	top: 0;
+}
+#menu>svg {
+	background-color: var(--secondaryBackground);
+	border-radius: 6px;
+	box-shadow: var(--shadow);
+	fill: none;
+	height: 28px;
+	margin: var(--large);
+	stroke-linecap: round;
+	stroke: var(--accent);
+	vertical-align: middle;
+	width: 28px;
+}
+#nav { 
+	position: fixed; 
+	a {
+		font-variant: none;
+		text-transform: none;
+	}
+	#links {
+		display: flex;
+		justify-content: space-evenly;
+		a {
+			background-color: var(--accent);
+			display: inline-block;
+			height: 32px;
+			width: 32px;
+			mask-repeat: no-repeat;
+		}
+	}
+	li {
+		list-style-type: none;
+		padding-top: 8px;
+		line-height: 120%;
+	}
+	nav {
+		background-color: var(--secondaryBackground);
+		box-shadow: var(--shadow);
+		box-sizing: border-box;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		overflow-y: auto;
+		padding: var(--large);
+		position: fixed;
+		top: 0;
+		transition: 
+			transform var(--animation-duration), 
+			opacity var(--animation-duration);
+		width: var(--navigation-width);
+	}
+	nav>ul { padding-left: 0; }
+	ul {
+		margin: 0;
+		padding: 0;
+		padding-left: var(--medium);
+	}
+	.header {
+		color: var(--primary);
+		font-style: normal;
+		text-decoration: none;
+	}
+	.section {
+		color: var(--secondary);
+		font-variant: small-caps;
+		text-transform: lowercase;
+	}
+	.selected {
+		font-weight: bold;
+		color: var(--primary);
+		text-decoration: underline;
+	}
+	.selected:hover, em:hover {
+		color: var(--accent);
+	}
+}
+#nav:target nav { 
+	transform: translateX(0);
+	opacity: 1;
+}
+#overlay {
+	background-color: var(--background);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity var(--animation-duration);
+}
+/* max-width: --navigation-width + --large + --content-max-width + --large */
+@media only screen and (max-width: 952px) {
+	#content { transform: translateX(0); }
+	#nav nav { 
+		transform: translateX(calc(var(--navigation-width) * -1));
+		opacity: 0;
+	}
+	#nav:target #overlay {
+		pointer-events: all;
+		opacity: 0.6;
+	}
+}

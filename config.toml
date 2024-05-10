@@ -1,0 +1,15 @@
+author = "Arturs"
+base_url = "https://levitatingpineapple.com"
+compile_sass = false
+default_language = "en"
+feed_filename = "rss.xml"
+generate_feed = true
+minify_html = true
+title = "Levitating Pineapple"
+
+[extra]
+links = [
+  { icon = "feed.svg",   url = "/rss.xml" },
+  { icon = "github.svg", url = "https://github.com/levitatingpineapple" },
+  { icon = "matrix.svg", url = "https://matrix.to/#/@tur:n0g.rip" }
+]

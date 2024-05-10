@@ -1,0 +1,108 @@
+classes: {
+	darkColor: {
+		style: {
+			font-color: white
+			stroke: transparent
+			border-radius: 8
+		}
+	}
+	lightColor: {
+		style: {
+			font-color: black
+			stroke: transparent
+			border-radius: 8
+		}
+	}
+	group {
+		style: {
+			stroke: transparent
+			border-radius: 16
+		}
+	}
+}
+
+background {
+	class: group
+	primary: {
+		class: darkColor
+		style.fill: \#000000
+	}
+	secondary: {
+		class: darkColor
+		style.fill: \#414141
+	}
+}
+
+foreground {
+	class: group
+	primary: {
+		class: lightColor
+		style.fill: \#ffffff
+	}
+	secondary: {
+		class: lightColor
+		style.fill: \#aeaeae
+	}
+}
+
+hues: {
+	class: group
+	error: {
+		class: darkColor
+		style.fill: \#ff6852
+	}
+	warning: {
+		class: darkColor
+		style.fill: \#e4a200
+	}
+	success: {
+		class: darkColor
+		style.fill: \#00d25a
+	}
+	complimet: {
+		class: darkColor
+		style.fill: \#00cefa
+	}
+	info: {
+		class: darkColor
+		style.fill: \#7a9fff
+	}
+	accent: {
+		class: darkColor
+		style.fill: \#f770ef
+	}
+}
+
+foregroundHues: {
+	class: group
+	error: {
+		class: lightColor
+		style.fill: \#ffb6a2
+	}
+	warning: {
+		class: lightColor
+		style.fill: \#ffd95a
+	}
+	success: {
+		class: lightColor
+		style.fill: \#90faa8
+	}
+	compliment: {
+		class: lightColor
+		style.fill: \#2bf8ff
+	}
+	info: {
+		class: lightColor
+		style.fill: \#b7d8ff
+	}
+	accent: {
+		class: lightColor
+		style.fill: \#ffb9ff
+	}
+}
+
+direction: right
+background -- foreground
+background -- hues
+foregroundHues -- background
+foreground.primary -- hues

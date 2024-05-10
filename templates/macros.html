@@ -1,0 +1,39 @@
+{% macro sections(section, all) %}
+<li>
+	<a href="{{ section.permalink }}" class="section">{{ section.title }}</a>
+	<ul>
+		{% for page in section.pages %}
+		<li>
+			{% if page.path == current_path or all %}
+				<a href="{{ page.permalink | safe }}" class="selected">{{ page.title }}</a>
+				{% if page.toc %}
+				<ul>
+					{% for header in page.toc %}
+					{{ self::headers(header=header) }}
+					{% endfor %}
+				</ul>
+				{% endif %}
+			{% else %}
+				<a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+			{% endif %}
+		</li>
+		{% endfor %}
+		{% for path in section.subsections | sort %}
+		{{ self::sections(section=get_section(path=path), all=all) }}
+		{% endfor %}
+	</ul>
+</li>
+{% endmacro %}
+
+{% macro headers(header) %}
+<li>
+	<a href="{{ header.permalink | safe }}" class="header">{{ header.title }}</a>
+	{% if header.children %}
+	<ul>
+		{% for child in header.children %}
+		{{ self::headers(header=child) }}
+		{% endfor %}
+	</ul>
+	{% endif %}
+</li>
+{% endmacro %}

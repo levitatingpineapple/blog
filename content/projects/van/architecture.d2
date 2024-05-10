@@ -1,0 +1,35 @@
+**.style.border-radius: 8
+**.style.stroke: transparent
+
+iOS: 📱 iOS App { near: center-left }
+clients: ESP32 Based Clients {
+	near: center-right
+	md: |md
+		- Solar serial bridge
+		- Air Quality (CO, CO2)
+		- Cameras
+		- Lights
+		- Ventilation
+	|
+}
+
+pi: SBC {
+	broker: 🦟 Mosquitto Broker {
+		shape: circle
+	}
+	d: SQLite {
+		shape: cylinder
+	}
+	dc: Database\nClient
+	ac: Automations\nClient
+	nc: Notifications\nClient
+
+	broker <-> ac
+	broker -> nc: Alarms,\nPlausability Checks
+	broker -> dc: Logs
+	dc -> broker: Charts
+	dc <-> d
+}
+
+iOS <-> pi.broker: RX: State\nTX: Controls
+clients <-> pi.broker: RX: Controls\nTX: State
