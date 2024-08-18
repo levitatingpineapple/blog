@@ -2,13 +2,12 @@ author = "Arturs"
 base_url = "https://levitatingpineapple.github.io/blog/"
 compile_sass = false
 default_language = "en"
-# feed_filename = "rss.xml"
 generate_feed = true
 minify_html = true
 title = "Levitating Pineapple"
 
 [extra]
 links = [
-  { icon = "feed.svg",   url = "/rss.xml" },
+  { icon = "feed.svg",   url = "/atom.xml" },
   { icon = "github.svg", url = "https://github.com/levitatingpineapple" },
 ]
