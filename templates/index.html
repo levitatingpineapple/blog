@@ -9,7 +9,5 @@
 {% endblock %}
 
 {% block content %}
-<ul>
-	{{ macros::sections(section=section, all=true) }}
-</ul>
+{{ section.content | safe }}
 {% endblock content %}
