@@ -39,7 +39,7 @@ This metronome utilizes polygons to visually represent polyrhythms in an easily 
 
 | Services                     |                                                                |
 | ---------------------------- | -------------------------------------------------------------- |
-| [Matrix](https://matrix.org) | [@tur:n0g.rip](https://matrix.to/#/@tur:n0g.rip)               |
+| SimpleX Chat                 | [contact](https://simplex.chat/contact#/?v=2-6&smp=smp%3A%2F%2FZKe4uxF4Z_aLJJOEsC-Y6hSkXgQS5-oc442JQGkyP8M%3D%40smp17.simplex.im%2FryUM9QCNMDSldaKEYwHepjrEnrrkvI2Y%23%2F%3Fv%3D1-3%26dh%3DMCowBQYDK2VuAyEAVuXjuT7SqSd1L_g2svZ7chAWmvis5804CiDF8IueUUg%253D%26srv%3Dogtwfxyi3h2h5weftjjpjmxclhb5ugufa5rcyrmg7j4xlch7qsr5nuqd.onion)               |
 | GitHub                       | [/levitatingpineapple](https://github.com/levitatingpineapple) |
 | Email                        | arturs аt thіѕ dоmаіn                                          |
 | GPG                          | [asc](gpg.txt), [gnu](gpg.gnu)                                 |
