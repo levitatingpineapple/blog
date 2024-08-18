@@ -1,0 +1,37 @@
+.hljs-comment,
+.hljs-quote { color: var(--code0);}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula { color: var(--code1); }
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst { color: var(--code2); }
+.hljs-literal { color: var(--code3); }
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta,
+.hljs-string { color: var(--code4); }
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number { color: var(--code5); }
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title { color: var(--code6); }
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title { color: var(--code7); }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bolder; }
+.hljs-link { text-decoration: underline; }

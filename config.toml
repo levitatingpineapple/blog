@@ -11,5 +11,4 @@ title = "Levitating Pineapple"
 links = [
   { icon = "feed.svg",   url = "/rss.xml" },
   { icon = "github.svg", url = "https://github.com/levitatingpineapple" },
-  { icon = "matrix.svg", url = "https://matrix.to/#/@tur:n0g.rip" }
 ]
